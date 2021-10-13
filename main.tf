@@ -2,18 +2,10 @@ provider "aws" {
   region = var.region
 }
 
-data "aws_ami" "ubuntu" {
-  most_recent = true
 
-  filter {
-    name   = "name"
-    values = ["npe-base-buster"]
-  }
-  owners = ["564623767830"] # Canonical
-}
 
 resource "aws_instance" "ubuntu" {
-  ami           = data.aws_ami.ubuntu.id
+  ami           = "ami-06e0735431a97fd2d"
   instance_type = var.instance_type
 
   tags = {
