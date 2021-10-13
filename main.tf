@@ -9,7 +9,7 @@ data "aws_ami" "ubuntu" {
     name   = "name"
     values = ["npe-base-buster"]
   }
-  owners = ["099720109477"] # Canonical
+  owners = ["564623767830"] # Canonical
 }
 
 resource "aws_instance" "ubuntu" {
